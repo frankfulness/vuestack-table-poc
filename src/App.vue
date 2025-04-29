@@ -1,3 +1,13 @@
+<template>
+  <div class="container">
+    <h1 class="header">Vue 3, TailwindCSS, & Tanstack Table v8</h1>
+
+    <div class="card">
+      <DataTable :data="data" :columns="columns" />
+    </div>
+  </div>
+</template>
+
 <script>
 import { ref } from "vue";
 import DataTable from "./components/DataTable.vue";
@@ -76,33 +86,3 @@ export default {
   },
 };
 </script>
-
-<template>
-  <div class="container">
-    <h1>Vue3 with Tanstack Table v8 PoC</h1>
-    <div class="table-container">
-      <DataTable :data="data" :columns="columns" />
-    </div>
-  </div>
-</template>
-
-<style>
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1 {
-  margin-bottom: 20px;
-  color: #0369a1;
-  font-size: 24px;
-}
-
-.table-container {
-  background-color: white;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-</style>
