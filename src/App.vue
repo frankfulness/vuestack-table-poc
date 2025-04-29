@@ -1,13 +1,3 @@
-<template>
-  <div class="container">
-    <h1 class="header">Vue 3, TailwindCSS, & Tanstack Table v8</h1>
-
-    <div class="card">
-      <DataTable :data="data" :columns="columns" />
-    </div>
-  </div>
-</template>
-
 <script>
 import { ref } from "vue";
 import DataTable from "./components/DataTable.vue";
@@ -86,3 +76,15 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class="max-w-4xl mx-auto p-6 bg-background">
+    <h1 class="text-3xl mb-8 font-bold text-custom-navy">
+      Vue 3, TailwindCSS, & Tanstack Table v8
+    </h1>
+
+    <div class="p-6 bg-card rounded-lg border border-border shadow-md">
+      <DataTable :data="data" :columns="columns" />
+    </div>
+  </div>
+</template>
